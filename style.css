@@ -185,9 +185,21 @@ header h2 {
 
 @media (max-width: 600px) {
     .nota-de-corte {
+        display: flex;
         width: 20vw;
-        height: 8vh;
+        height: 10vh;
         transform: translate(-2.5vw);
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1000px){
+    .nota-de-corte {
+        display: flex;
+        height: 10vh;
+        text-align: center;
+        align-items: center;
     }
 }
 
