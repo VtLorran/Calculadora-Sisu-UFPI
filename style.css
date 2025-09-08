@@ -1,0 +1,307 @@
+* {
+    color: black;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: rgb(222, 222, 222);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.Calculadora {
+    background-color: white;
+    height: auto; /* Alterado para auto para melhor responsividade */
+    width: 70vw;
+    margin-top: 5vh;
+    border-radius: 20px 20px 0 0;
+}
+
+@media (max-width: 600px) {
+    .Calculadora {
+        width: 95vw; /* Ajusta a largura para telas menores */
+        margin-top: 2vh;
+    }
+}
+
+header {
+    height: 17vh;
+    background: rgb(98, 0, 236);
+    border-radius: 20px 20px 0 0;
+}
+
+header h1 {
+    font-size: clamp(2em, 5vw, 3em);
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.titulo-calculadora {
+    padding-top: 15px;
+}
+
+header h2 {
+    font-size: clamp(1em, 1.4vw, 3em);
+    color: white;
+    text-align: center;
+    margin-bottom: 6px;
+    font-weight: normal;
+}
+
+.topicos {
+    display: flex;
+    padding-left: 1vw;
+    padding-top: 4.5vh;
+}
+
+.topicos h3 {
+    font-size: clamp(0.8em, 1.25vw, 1.5em);
+    flex: 1;
+    text-align: center;
+}
+
+.linha-materia {
+    display: flex;
+    margin-left: 1vw;
+    margin-bottom: 4vh;
+    margin-top: 4vh;
+    font-size: clamp(1em, 1.15vw, 1.5em); /* Responsivo */
+    border-bottom: solid 1px rgb(216, 216, 216);
+    
+}
+
+.linha-materia p,
+.linha-materia div,
+.linha-materia input {
+    font-size: inherit; /* Herda o tamanho responsivo da linha */
+}
+
+.nome-materia,
+.nota,
+.peso,
+.nota-ponderada {
+    transform: translate(0, -1.5vh);
+}
+
+.nota {
+    transform: translate(0.6vw, -1.5vh);
+}
+
+.topicos, .linha-materia {
+    display: flex;
+    align-items: center;
+    gap: 3vw; /* Espaçamento igual entre colunas */
+}
+
+.linha-materia > * {
+    flex: 1 1 0;
+    text-align: center;
+}
+
+.linha-materia input {
+    width: 100%;
+    min-width: 60px;
+    max-width: 120px;
+    font-size: inherit;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .topicos {
+        padding-left: 1vw;
+        padding-top: 2vh;
+    }
+    .linha-materia {
+        font-size: clamp(0.9em, 2vw, 1em); /* Aumenta a responsividade em telas pequenas */
+    }
+    .linha-materia input {
+        min-width: 40px;
+        max-width: 80vw;
+    }
+}
+
+.peso {
+    display: flex;
+    transform: translate(11.6vw, -1.5vh);
+}
+
+@media (max-width: 600px) {
+    .peso {
+        transform: translate(10vw, -1.5vh);
+    }
+}
+
+
+
+.configuracoes {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    height: auto;
+    border: solid 1px rgb(216, 216, 216);
+    width: 55vw;
+    margin: 2vh auto; /* Centraliza com margem */
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.configuracoes h1 {
+    text-align: center; 
+    font-size: clamp(1.5em, 1.7vw, 2.5em);
+    margin-top: 3vh;
+}
+
+.escolha {
+    text-align: center;
+    margin-top: 2vh;
+    font-size: clamp(1em, 1.2vw, 1.5em);
+}
+
+.box {
+    text-align: center;
+    margin-top: 1vh;
+}
+
+.curso {
+    width: 15vw;
+    height: 3vh;
+    text-align: center;
+    border: solid 1px rgb(187, 187, 187);
+    outline: none;
+}
+
+.nota-de-corte {
+     text-align: center;
+     margin-top: 3vh;
+     border: solid 1px rgb(187, 187, 187);
+     width: 15vw;
+     margin-left: 20vw;
+     height: auto;
+     font-size: clamp(1em, 1.2vw, 1.5em);
+}
+
+@media (max-width: 600px) {
+    .nota-de-corte {
+        width: 20vw;
+        height: 5vh;
+        transform: translate(-2.5vw);
+    }
+}
+
+.nota-minima-red {
+    text-align: center;
+    margin-top: 4vh;
+}
+
+.nota-minima-red span {
+    font-size: clamp(1em, 1.2vw, 1.5em);
+}
+
+.nota-minima-red p {
+    font-size: clamp(1em, 1.2vw, 1.5em); 
+}
+
+.resultados {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid 1px rgb(216, 216, 216);
+    width: 55vw;
+    margin: 2vh auto; /* Centraliza com margem */
+    height: auto;
+    border-radius: 10px;
+}
+
+.resultados h1 {
+    text-align: center;
+    font-size: clamp(1.5em, 1.7vw, 2.5em);
+    margin-top: 3vh;
+}
+
+.final-ponderada {
+    text-align: center;
+    margin-top: 2vh;
+    font-size: clamp(1em, 1.2vw, 1.5em);
+}
+
+.resultado-final {
+    text-align: center;
+    margin-top: 2vh;
+    font-size: clamp(1em, 2vw, 1.5em);
+    font-weight: bold;
+}
+
+.inserir-nota {
+    text-align: center;
+    margin-top: 3vh;
+}
+
+.botao-enviar {
+    text-align: center;
+    margin-top: 4vh;
+}
+
+.botao-enviar input {
+    width: 10vw;
+    height: 5vh;
+    font-size: clamp(1em, 1.2vw, 1.5em);
+    color: white;
+    background-color: rgb(98, 0, 236);
+    border: none;
+    border-radius: 07px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .botao-enviar input {
+        width: 25vw;
+        height: 7vh;
+        font-size: clamp(1em, 1.2vw, 1.5em);
+    }
+}
+
+.botao-enviar input:hover {
+    background-color: rgb(120, 23, 255);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.323);
+}
+
+.extra {
+    text-align: center;
+    margin-top: 10vh;
+    height: 5vh;
+}
+
+.div-aprov {
+    justify-content: center;
+    display: none;
+}
+
+.aprovado {
+    background-color: rgba(0, 183, 0, 0.358);
+    width: 10rem;
+    height: 3rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.div-reprov {
+    display: none;
+    justify-content: center;
+}
+
+.reprovado {
+    background-color: rgba(183, 0, 0, 0.618);
+    width: 10rem;
+    height: 3rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}

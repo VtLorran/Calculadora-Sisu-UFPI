@@ -1,0 +1,26 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+//Utilize CSS Media Queries. Com elas, você aplica estilos diferentes conforme a largura, altura e resolução da tela.
+@media (max-width: 768px) {
+    /* estilos para tablets e celulares */
+}
+
+
+//  Use CSS para limitar o tamanho máximo e largura:
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+A função clamp() no CSS define um valor que fica limitado entre um mínimo e um máximo, mas pode ser responsivo entre esses limites.
+
+No caso do font-size: clamp(0.5em, 5vw, 3em);:
+
+0.5em é o tamanho mínimo da fonte.
+5vw é o valor ideal, que cresce ou diminui conforme a largura da tela.
+3em é o tamanho máximo da fonte.
+Ou seja, o tamanho da fonte vai variar conforme a tela, mas nunca será menor que 0.5em nem maior que 3em.
+   
+   

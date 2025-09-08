@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora UFPI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="Calculadora">
+
+        <header>
+            <h1 class="titulo-calculadora">Calculadora UFPI</h1>
+            <h2>Insira suas notas para consultar sua média ponderada</h2>
+        </header>
+
+        <div class="materias">
+            <div class="topicos">
+                <h3>Área do conhecimento</h3>
+                <h3>Sua Nota</h3>
+                <h3>Peso</h3>
+                <h3>Nota Ponderada</h3>
+            </div>
+
+            <div class="linha-materia">
+                <div class="nome-materia">Linguagens</div>
+                <input type="number" class="nota" id="notaLinguagens" placeholder="0-1000">
+                <div  class="peso peso-ling">1</div>
+                <div class="nota-ponderada rs-ling">0.00</div>
+            </div>
+            
+            <div class="linha-materia">
+                <div class="nome-materia">
+                    <p>Matemática e suas Tecnologias</p>
+                </div>
+                <input type="number" class="nota" id="notaMatematica" placeholder="0-1000">
+                <div class="peso peso-mat">1</div>
+                <div class="nota-ponderada rs-mat">0.00</div>
+            </div>
+
+            <div class="linha-materia">
+                <div class="nome-materia">
+                    <p>Ciências da Natureza e suas Tecnologias</p>
+                </div>
+                <input type="number" class="nota" id="notaCiencias" placeholder="0-1000">
+                <div class="peso peso-cie">1</div>
+                <div class="nota-ponderada rs-cie">0.00</div>
+            </div>
+
+            <div class="linha-materia">
+                <div class="nome-materia">
+                    <p>Ciências Humanas e suas Tecnologias</p>
+                </div>
+                <input type="number" class="nota" id="notaHumanas" placeholder="0-1000">
+                <div class="peso peso-hum">1</div>
+                <div class="nota-ponderada rs-hum">0.00</div>
+            </div>
+
+            <div class="linha-materia">
+                <div class="nome-materia">
+                    <p>Redação</p>
+                </div>
+                <input type="number" class="nota" id="notaRedacao" placeholder="0-1000">
+                <div class="peso peso-red">1</div>
+                <div class="nota-ponderada rs-red">0.00</div>
+            </div>
+            
+        </div>
+
+        <div class="configuracoes">
+             <div><h1>Configurações:</h1></div>
+             <div class="escolha"><p>Escolha um curso:</p></div>
+             <div class="box">
+                 <select class="curso" id="opcoes" name="curso">
+                        <option value=""></option>
+                        <option value="administracao">Administração</option>
+                        <option value="ciencias-biologicas">Ciências Biológicas</option>
+                        <option value="historia"> História</option>
+                        <option value="enfermagem">Enfermagem</option>
+                        <option value="letras-portugues">Letras - Português</option>
+                        <option value="matematica">Matemática</option>
+                        <option value="medicina">Medicina</option>
+                        <option value="nutricao">Nutrição</option>
+                        <option value="pedagogia">Pedagogia</option>
+                        <option value="sistemas-informacao">Sistemas de Informação</option>
+                    </select>
+             </div>
+             <div class="nota-de-corte"><p>Nota de Corte: <span class="nota-de-corte-span">0</span></p> </div>
+             <div class="nota-minima-red"><p>Nota mínima em Redação: <span>450.00</span></p></div>
+             <br>
+             <br>
+        </div>
+        
+        <div class="resultados">
+            <div>
+                <h1>Resultado:</h1>
+            </div>
+            <div class="final-ponderada">
+                <p>Média Ponderada: </p>
+            </div>
+            <div class="resultado-final">
+                <span class="resultado-final-span">
+                    0.00
+                </span></div>
+            <div class="inserir-nota">
+                <p class="paragrafo-inserir">Insira suas notas para ver seu resultado</p>
+                <div class="div-aprov">
+                <p class="aprovado">Aprovado!</p>
+                </div>
+                <div class="div-reprov">
+                <p class="reprovado">Reprovado!</p>
+                </div>
+            </div>
+            <div class="botao-enviar">
+                <input type="button" id="bnt-calcular" value="Calcular">
+            <div>
+
+            <br>
+
+
+        </div>
+
+        
+</body>
+
+<script src="main.js"></script>
+
+</html>
