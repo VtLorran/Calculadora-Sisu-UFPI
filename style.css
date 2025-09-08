@@ -179,14 +179,14 @@ header h2 {
      border: solid 1px rgb(187, 187, 187);
      width: 15vw;
      margin-left: 20vw;
-     height: auto;
+     height: 1.5rem;
      font-size: clamp(1em, 1.2vw, 1.5em);
 }
 
 @media (max-width: 600px) {
     .nota-de-corte {
         width: 20vw;
-        height: 5vh;
+        height: 8vh;
         transform: translate(-2.5vw);
     }
 }
