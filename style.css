@@ -108,8 +108,15 @@ header h2 {
     max-width: 120px;
     font-size: inherit;
     text-align: center;
+    outline: none;
 }
 
+.linha-materia input:hover {
+  border-color: #007bff;
+}
+.linha-materia input:focus {
+    border-color: #0056b3;
+}
 @media (max-width: 600px) {
     .topicos {
         padding-left: 1vw;
@@ -146,6 +153,11 @@ header h2 {
     margin: 2vh auto; /* Centraliza com margem */
     flex-direction: column;
     border-radius: 10px;
+    transition: 0.3s;
+}
+
+.configuracoes:hover {
+    transform: translateY(-0.5rem);
 }
 
 .configuracoes h1 {
@@ -173,6 +185,38 @@ header h2 {
     outline: none;
 }
 
+.curso {
+  color: #333;
+  background-color: #fff;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: all 0.3s ease;
+}
+
+.curso:hover {
+  border-color: #007bff;
+}
+
+.curso:focus {
+  border-color: #0056b3;
+}
+
+/* Estiliza a opção vazia (placeholder) */
+.curso option[value=""] {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Opcional: cor de fundo ao passar o mouse nas opções (SÓ FUNCIONA EM ALGUNS NAVEGADORES) */
+.curso option:hover {
+  background-color: #e9f5ff;
+}
+
 .nota-de-corte {
      text-align: center;
      margin-top: 3vh;
@@ -181,7 +225,16 @@ header h2 {
      margin-left: 20vw;
      height: 1.5rem;
      font-size: clamp(1em, 1.2vw, 1.5em);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: 4px;
+    
 }
+
+.nota-de-corte:hover {
+  border-color: #007bff;
+}
+
+
 
 @media (max-width: 600px) {
     .nota-de-corte {
@@ -206,10 +259,16 @@ header h2 {
 .nota-minima-red {
     text-align: center;
     margin-top: 4vh;
+
+}
+
+.nota-minima-red p {
+    font-weight: bold;
 }
 
 .nota-minima-red span {
     font-size: clamp(1em, 1.2vw, 1.5em);
+    font-weight: bold;
 }
 
 .nota-minima-red p {
@@ -225,6 +284,11 @@ header h2 {
     margin: 2vh auto; /* Centraliza com margem */
     height: auto;
     border-radius: 10px;
+    transition: 0.3s;
+}
+
+.resultados:hover {
+    transform: translateY(-0.5rem);
 }
 
 .resultados h1 {
@@ -273,6 +337,19 @@ header h2 {
         height: 7vh;
         font-size: clamp(1em, 1.2vw, 1.5em);
     }
+
+    .inserir-nota p {
+        font-size: 0.8rem;
+    }
+
+    .nota-minima-red span {
+        font-size: 0.9rem;
+    }
+
+    .nota-minima-red p {
+        font-size: 0.8rem;
+    }
+
 }
 
 .botao-enviar input:hover {
